@@ -16,6 +16,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index:999;
 }
 
 #headerAlignTop {
@@ -78,7 +79,8 @@ header nav a:hover {
 
 /* IMAGES IN INDEX */
 .images {
-    height: 95vh;
+    min-height:100vh;
+    max-width: 100%;
     background-size: cover;
     background-position: center;
     animation:changePhotoCountry 20s infinite;
@@ -109,6 +111,84 @@ th {
     text-align: center;
     font-size: 24px
 }
+
+/*CSS IN JOBS*/
+
+.pill {
+    display: inline-block;
+    background: #c9e3ea;
+    color: #0f1011;
+    font-weight: 600;
+    padding: 0.25rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid #156c70;
+    text-transform: uppercase;
+    font-size: 1 rem;
+}
+       
+.accent-bar{
+    background-color: rgb(251, 239, 246);
+    padding: 12px 1rem;
+    border: 4px solid;
+    border-image: linear-gradient(to right,#6a4c93,#35bde3)1;
+    margin-top: 1rem;
+}
+
+.accent-bar2{
+background-color: rgb(246, 224, 246);
+padding: 12px 1rem;
+border-radius: 5px;
+border: 2px solid #aa7ca1;
+margin-top: 1rem;
+font-size:20px;
+width: 25%;
+float:right;
+}
+
+.accent-bar3{    
+    padding: 12px 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    width:75%;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.main-content{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+.accent-bar4{
+    background-color: rgb(251, 239, 246);
+    padding: 12px 1rem;
+    border: 4px solid;
+    border-image: linear-gradient(to right,#35bde3,#6a4c93)1;
+    margin-top: 1rem;
+}
+            
+.accent-bar5{
+    padding: 12px 1rem;
+    line-height: 1.6;
+    font-size: 24px;
+}
+
+/* IMAGES IN JOBS */
+.jobimages {
+    height: 100vh;
+    background-size: cover;
+    background-position:center;
+    animation:changePhoto 16s infinite;
+}
+
+@keyframes changePhoto {
+    0%, 25% {background-image:url("Images/jobimage.jpg");}
+    26%, 50% {background-image:url("Images/jobimage2.jpg");}
+    51%, 75% {background-image:url("Images/jobimage3.jpg");}
+    76%, 100% {background-image:url("Images/jobimage4.jpg");}
+}
+           
 
 /* FORM IN APPLY */
 form {
@@ -221,6 +301,11 @@ form input[type="checkbox"] {
     margin-right: 8px;
 }
 
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
 form fieldset {
     border: 1px solid #D8C8E8;
     padding: 20px;
@@ -316,7 +401,7 @@ form label{
 /* ABOUT */
 body.about {
     padding-top: 0;
-    background-image: url("Images/about_background.jpeg");
+    background-image: url("about_background.jpeg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -349,7 +434,7 @@ body.about > img {
 
 #members dt {
     background-color: #ADA6C5;
-    color: #1F4E6D;
+    color: white;
     font-size: 20px;
     font-weight: bold;
     padding: 14px 25px;
@@ -644,7 +729,6 @@ body.about h2#contact {
         gap: 15px;
         font-size: 1em;
         margin-right: 20px;
-        flex-wrap: wrap;
     }
 
     form {
@@ -666,16 +750,6 @@ body.about h2#contact {
 
     #groupPhoto figure {
         width: 100%;
-    }
-
-    .memberContent {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .memberContent img {
-        margin-right: 0;
-        margin-bottom: 20px;
     }
 }
 
